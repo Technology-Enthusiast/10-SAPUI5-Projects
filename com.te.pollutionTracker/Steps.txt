@@ -1,0 +1,6 @@
+- Creating a postman mock server 
+- Flexible column layout   
+  router similar to Route hash routing 
+  dynamic pages for three different view for Country, state and district
+  tables to display 
+  

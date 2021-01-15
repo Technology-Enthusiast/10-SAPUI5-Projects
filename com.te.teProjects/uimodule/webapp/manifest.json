@@ -1,0 +1,170 @@
+{
+  "_version": "1.21.0",
+  "sap.app": {
+    "id": "com.te.teProjects",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}"
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "com.te.teProjects.view.Main",
+      "type": "XML",
+      "async": true,
+      "id": "idAppControl"
+    },
+    "dependencies": {
+      "minUI5Version": "1.60.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.ui.layout": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.te.teProjects.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "com.te.teProjects.view",
+        "controlId": "idAppControl",
+        "controlAggregation": "pages",
+        "async": true
+      },
+      "routes": [
+        {
+          "name": "RouteMain",
+          "pattern": "RouteMain",
+          "target": [
+            "TargetMain"
+          ]
+        },
+        {
+          "name": "Tiles",
+          "pattern": "",
+          "target": [
+            "Tiles"
+          ]
+        },
+        
+        {
+          "name": "first",
+          "pattern": "first",
+          "target": [
+            "Countdown"
+          ]
+        },
+        
+        {
+          "name": "second",
+          "pattern": "second",
+          "target": [
+            "Covid"
+          ]
+        },{
+          "name": "second-list",
+          "pattern": "second-list",
+          "target": [
+            "Covid-List"
+          ]
+        },{
+          "name": "second-pie",
+          "pattern": "second-pie",
+          "target": [
+            "Covid-Pie"
+          ]
+        },
+        
+        {
+          "name": "third",
+          "pattern": "third",
+          "target": [
+            "Vacc"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetMain": {
+          "viewType": "XML",
+          "viewLevel": 1,
+          "viewId": "idAppControl",
+          "viewName": "Main"
+        },
+        "Tiles": {
+          "viewType": "XML",
+          "viewId": "Tiles",
+          "viewName": "Tiles",
+          "controlId":"idAppControl"
+        },
+        "Countdown": {
+          "viewType": "XML",
+          "viewId": "countdown.Countdown",
+          "viewName": "countdown.Countdown",
+          "controlId":"idAppControl"
+        },
+        "Covid": {
+          "viewType": "XML",
+          "viewId": "covid.Covid",
+          "viewName": "covid.Covid",
+          "controlId":"idAppControl"
+        },
+        "Covid-List": {
+          "viewType": "XML",
+          "viewId": "covid.List",
+          "viewName": "covid.List",
+          "controlId":"idAppControl"
+        },
+        "Covid-Pie": {
+          "viewType": "XML",
+          "viewId": "covid.Pie",
+          "viewName": "covid.Pie",
+          "controlId":"idAppControl"
+        },
+        "Vacc": {
+          "viewType": "XML",
+          "viewId": "vacc.Vacc",
+          "viewName": "vacc.Vacc",
+          "controlId":"idAppControl"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "vacc": "Typhoid",
+    "company": "Novartis",
+    "date": "Nov 7 2020",
+    "type": "Injectible",
+    "ctype":"Type01"
+  },
+  {
+    "vacc": "PCV",
+    "company": "AZ",
+    "date": "Nov 25 2020",
+    "type": "Injectible",
+    "ctype":"Type01"
+  },
+  {
+    "vacc": "Flu",
+    "company": "GSK",
+    "date": "May 21 2020",
+    "type": "Injectible",
+    "ctype":"Type01"
+  },
+  {
+    "vacc": "Vit D",
+    "company": "Moderna",
+    "date": "May 23 2021",
+    "type": "Oral",
+    "ctype":"Type02"
+  },
+  {
+    "vacc": "vacc1",
+    "company": "Sandoz",
+    "date": "May 23 2020",
+    "type": "Oral",
+    "ctype":"Type02"
+  },
+  {
+    "vacc": "vacc2",
+    "company": "Mck",
+    "date": "May 23 2020",
+    "type": "Oral",
+    "ctype":"Type03"
+  },
+  {
+    "vacc": "Covid 19",
+    "company": "GSK",
+    "date": "Jun 22 2020",
+    "type": "Oral",
+    "ctype":"Type02"
+  },
+  {
+    "vacc": "Typhoid",
+    "company": "Mck",
+    "date": "Jul 13 2020",
+    "type": "Injectible",
+    "ctype":"Type01"
+  }
+]

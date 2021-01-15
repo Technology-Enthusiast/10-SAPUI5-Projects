@@ -1,0 +1,49 @@
+<mvc:View
+	controllerName="com.te.pollutionTracker.controller.Detail"
+	xmlns="sap.m"
+	xmlns:f="sap.f"
+	xmlns:mvc="sap.ui.core.mvc">
+	<f:DynamicPage id="dynamicPageId" toggleHeaderOnTitleClick="false">
+		<!-- DynamicPage Title -->
+		<f:title>
+			<f:DynamicPageTitle>
+				<f:heading>
+					<Title text="State Wise Pollution"/>
+				</f:heading>
+			</f:DynamicPageTitle>
+		</f:title>
+
+		<!-- DynamicPage Content -->
+		<f:content>
+			<VBox fitContainer="true">
+			 	<Table
+					id="statesPollutionTable"
+					inset="false"
+					items="{states>/}"
+					class="sapFDynamicPageAlignContent"
+					width="auto">
+					<columns>
+						<Column width="12em">
+							<Text text="State"/>
+						</Column>
+						<Column	hAlign="End">
+							<Text text="AQI"/>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem type="Navigation" press="onStatePress">
+							<cells>
+								<ObjectIdentifier title="{states>state}" text="{states>AQI}"/>
+								<ObjectNumber
+									number="{states>AQI}"
+									/>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</VBox>
+		</f:content>
+
+		
+	</f:DynamicPage>
+</mvc:View>
