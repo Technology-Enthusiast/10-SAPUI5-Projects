@@ -1,0 +1,47 @@
+<core:FragmentDefinition  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:fb="sap.ui.comp.filterbar"
+  xmlns:core="sap.ui.core"
+  xmlns:mvc="sap.ui.core.mvc">
+
+  <fb:FilterBar id="filterBar" header="Header" reset="onReset" search="onSearch" clear="onClear" cancel="onCancel" 
+  filtersDialogClosed = "onFiltersDialogClosed" showRestoreButton="true" showClearButton="true" showCancelButton="true">
+
+    <fb:filterGroupItems>
+      <fb:FilterGroupItem groupName="__$INTERNAL$" name="A" label="Business Partner" partOfCurrentVariant="true" visibleInFilterBar="true">
+        <fb:control>
+          <Input id="busPart" type="Text" change="onChange"
+          showValueHelp="true"
+						valueHelpOnly="true"
+						valueHelpRequest=".onValueHelpRequested"
+						suggestionItems="{
+							path: '/BusinessPartnerSet',
+							sorter: { path: 'BusinessPartnerID' }
+						}"
+          >	<core:Item key="{BusinessPartnerID}" text="{CompanyName} ({BusinessPartnerID})" />
+        </Input>
+        </fb:control>
+      </fb:FilterGroupItem>
+
+      <fb:FilterGroupItem groupName="__$INTERNAL$" name="B" label="Delivery Status" labelTooltip="Tooltip Example"  partOfCurrentVariant="true" visibleInFilterBar="true">
+        <fb:control>
+          <MultiInput
+          id="delStatus"
+          valueHelpOnly="true"
+          valueHelpRequest=".onValueHelpRequestedDel"
+        >
+        </MultiInput>
+        </fb:control>
+      </fb:FilterGroupItem>
+      <fb:FilterGroupItem groupName="__$INTERNAL$" name="C" label="Billing Status" labelTooltip="Tooltip Example" partOfCurrentVariant="true" visibleInFilterBar="true">
+        <fb:control>
+          <Input id="bilStatus" type="Text" change="onChange"/>
+        </fb:control>
+      </fb:FilterGroupItem>
+
+    </fb:filterGroupItems>
+
+  </fb:FilterBar>
+    
+       
+</core:FragmentDefinition>

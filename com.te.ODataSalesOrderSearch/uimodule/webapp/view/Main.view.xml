@@ -1,0 +1,14 @@
+<mvc:View controllerName="com.te.ODataSalesOrderSearch.controller.Main" displayBlock="true"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:l="sap.ui.layout"
+  >
+  <App id="idAppControl">
+    <pages>
+      <Page  title="{i18n>title}">
+        <l:VerticalLayout id="main" width="100%">
+        </l:VerticalLayout>
+      </Page>
+    </pages>
+  </App>
+</mvc:View>

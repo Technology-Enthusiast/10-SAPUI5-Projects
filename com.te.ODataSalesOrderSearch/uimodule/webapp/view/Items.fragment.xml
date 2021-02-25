@@ -1,0 +1,58 @@
+<core:FragmentDefinition  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:fb="sap.ui.comp.filterbar"
+  xmlns:core="sap.ui.core"
+  xmlns:mvc="sap.ui.core.mvc">
+
+  <Table id="idProductsTable"
+  inset="false"
+ >
+  
+  <columns>
+    <Column
+      width="12em">
+      <Text text="Sales Order ID" />
+    </Column>
+    <Column
+      minScreenWidth="Tablet"
+      demandPopin="true">
+      <Text text="Customer ID" />
+    </Column>
+    <Column
+      minScreenWidth="Desktop"
+      demandPopin="true"
+      hAlign="End">
+      <Text text="Billing Status" />
+    </Column>
+    <Column
+      minScreenWidth="Desktop"
+      demandPopin="true"
+      hAlign="Center">
+      <Text text="Delivery Status" />
+    </Column>
+    <Column
+      hAlign="End">
+      <Text text="Customer Name" />
+    </Column>
+  </columns>
+  <items>
+    <ColumnListItem id="sales" >
+      <cells>
+        <ObjectIdentifier
+          title="{SalesOrderID}"
+          text="{SalesOrderID}"/>
+        <Text
+          text="{CustomerID}" />
+        <Text
+          text="{BillingStatus}" />
+          <Text
+          text="{DeliveryStatus}" />
+          <Text
+          text="{CustomerName}" />
+   
+      </cells>
+    </ColumnListItem>
+  </items>
+</Table>     
+       
+</core:FragmentDefinition>

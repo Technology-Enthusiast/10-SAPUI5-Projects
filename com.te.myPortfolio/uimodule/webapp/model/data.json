@@ -1,0 +1,81 @@
+{
+    "name":"Nabheeet Madan",
+    "email":"test@test.com",
+    "designation":"Developer",
+    "phone":"+91-1219219219",
+    "currentcompany":"Movilitas Consulting",
+    "education":[
+        {
+            "type":"Xth",
+            "per":"65%",
+            "year":2002
+        },
+        {
+            "type":"XIIth",
+            "per":"65%",
+            "year":2004
+        },
+        {
+            "type":"B.Tech Comp Science",
+            "per":"65%",
+            "year":2008
+        }
+    ], 
+    "certification":[
+        {
+            "name":"SAPABAP",
+            "year":2002
+        },
+        {
+            "name":"SAPUI5",
+            "year":2004
+        },
+        {
+            "name":"SAPCloud",
+            "year":2008
+        }
+    ], 
+    "employment":[
+        {  "name":"Movilitas",
+           "projects":[
+               {
+               "name":"Project1",
+               "type":"Implementation"
+           },
+           {
+               "name":"Project2",
+               "type":"Support"
+            }
+             ]
+   
+    
+  },{  "name":"Movilitas India",
+           "projects":[
+               {
+               "name":"Project3",
+               "type":"Implementation1",
+               "projects":[
+                   {
+                       "name":"FICO Rconcillation",
+                       "type":"Report"
+                   },
+                   {
+                       "name":"Track and Trace",
+                       "type":"Report Dashboard"
+                   }
+               ]
+           },
+           {
+               "name":"Project4",
+               "type":"Support1"
+            }
+             ]
+   
+    
+  }]
+
+
+
+
+
+}

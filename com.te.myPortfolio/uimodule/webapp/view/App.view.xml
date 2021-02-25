@@ -1,0 +1,146 @@
+<mvc:View controllerName="com.te.myPortfolio.controller.App"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.uxap"
+  xmlns:m="sap.m"
+  xmlns:t="sap.ui.table"
+  xmlns:core="sap.ui.core"
+  xmlns:forms="sap.ui.layout.form" height="100%">
+
+  <ObjectPageLayout id="ObjectPageLayout" upperCaseAnchorBar="false">
+    <headerTitle>
+      <ObjectPageDynamicHeaderTitle>
+        <expandedHeading>
+          <m:Title text="{portfolio>/name}" />
+        </expandedHeading>
+
+        <snappedHeading>
+          <m:HBox>
+           
+            <m:VBox>
+              <m:Title text="{portfolio>/name}" />
+              <m:Text text="{portfolio>/designation}" />
+            </m:VBox>
+          </m:HBox>
+        </snappedHeading>
+
+        <expandedContent>
+          <m:Text text="{portfolio>/designation}"/>
+        </expandedContent>
+
+        <snappedTitleOnMobile>
+          <m:Title text="{portfolio>/name}" />
+        </snappedTitleOnMobile>
+
+   
+      </ObjectPageDynamicHeaderTitle>
+    </headerTitle>
+
+    <headerContent>
+      <m:FlexBox wrap="Wrap" fitContainer="true">
+        
+
+        <m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+          <m:Title text="Email" class="sapUiTinyMarginBottom" />
+          <m:ObjectStatus text="{portfolio>/email}" state="Success" class="sapMObjectStatusLarge" />
+        </m:VBox>
+
+        <m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+          <m:Title text="Current Company" class="sapUiTinyMarginBottom" />
+          <m:ObjectStatus text="{portfolio>/currentcompany}" class="sapMObjectStatusLarge" />
+        </m:VBox>
+
+        <m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+          <m:Title text="Phone" class="sapUiTinyMarginBottom" />
+          <m:ObjectStatus text="{portfolio>/phone}" state="Error" class="sapMObjectStatusLarge" />
+        </m:VBox>
+
+ 
+      </m:FlexBox>
+    </headerContent>
+
+    <sections>
+      <ObjectPageSection titleUppercase="false" title="Education Details">
+        <subSections>
+          <ObjectPageSubSection title="Education Details" showTitle="false">
+            <blocks>
+             <m:Table class="sapUxAPObjectPageSubSectionAlignContent" width="auto" items="{portfolio>/education}">
+                
+
+                <m:columns>
+                  <m:Column>
+                    <m:Text text="Class" />
+                  </m:Column>
+                  <m:Column minScreenWidth="Tablet" demandPopin="true">
+                    <m:Text text="Percentage" />
+                  </m:Column>
+                  <m:Column minScreenWidth="Tablet" demandPopin="true">
+                    <m:Text text="Year" />
+                  </m:Column>
+             
+                </m:columns>
+
+                <m:items>
+                  <m:ColumnListItem>
+                    <m:Link text="{portfolio>type}" />
+                    <m:Text text="{portfolio>per}" />
+                    <m:Text text="{portfolio>year}" />
+                  </m:ColumnListItem>
+           
+                </m:items>
+              </m:Table>
+            </blocks>
+          </ObjectPageSubSection>
+
+        </subSections>
+      </ObjectPageSection>
+
+      <ObjectPageSection titleUppercase="false" title="Certification Details">
+        <subSections>
+          <ObjectPageSubSection title="Certification Details">
+            <blocks>
+            <m:FlexBox items="{portfolio>/certification}">
+             	<m:GenericTile  header="{portfolio>name}"  press="onPress"
+		 subheader="{portfolio>year}">
+		<m:TileContent>
+			
+		</m:TileContent>
+	</m:GenericTile>
+</m:FlexBox>
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+      <ObjectPageSection titleUppercase="false" title="Employment details">
+        <subSections>
+
+          <ObjectPageSubSection title="Employment details" showTitle="false">
+            <blocks>
+               <t:TreeTable
+                    id="TreeTableBasic"
+                    rows="{path:'portfolio>/employment', parameters: {arrayNames:['projects']}}"
+                    selectionMode="MultiToggle"
+                    enableSelectAll="false"
+                    ariaLabelledBy="title">
+                <t:columns>
+                    <t:Column width="13rem">
+                        <m:Label text="Description"/>
+                        <t:template>
+                            <m:Text text="{portfolio>name}" wrapping="false" />
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="9rem">
+                        <m:Label text="Type"/>
+                        <t:template>
+                           <m:Text text="{portfolio>type}" wrapping="false" />
+                        </t:template>
+                    </t:Column>
+                   
+                </t:columns>
+            </t:TreeTable>
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+    </sections>
+  </ObjectPageLayout>
+</mvc:View>
