@@ -1,0 +1,19 @@
+ <mvc:View controllerName="com.te.captcha.controller.Main"
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:ca="com.te.captcha.control">
+  <App id="idAppControl" >
+    <pages>
+      <Page title="{i18n>title}">
+        <content>
+          <ca:Captcha
+          heading="Captcha Control" valid="onValid"
+          >
+
+          </ca:Captcha>
+        </content>
+      </Page>
+    </pages>
+  </App>
+</mvc:View>

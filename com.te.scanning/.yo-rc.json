@@ -1,0 +1,16 @@
+{
+  "generator-easy-ui5": {
+    "projectname": "scanning",
+    "namespace": "com.te",
+    "platform": "Static webserver",
+    "viewtype": "XML",
+    "viewname": "Main",
+    "ui5libs": "Local resources (OpenUI5)",
+    "newdir": true,
+    "namespaceURI": "com/te",
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}

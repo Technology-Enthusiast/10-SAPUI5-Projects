@@ -1,0 +1,54 @@
+ <mvc:View controllerName="com.te.rockPaperScissor.controller.Main"
+  displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core">
+  <App id="idAppControl" >
+    <pages>
+      <Page showHeader="false" >
+        <content>
+          <l:Grid  hSpacing="0"
+          defaultSpan="XL12 L12 M12 S12" class="sapUiSmallMargin centeralign" >
+          <l:VerticalLayout class="sapUiTinyMarginEnd" >
+           
+              <Text text="Welcome to Rock Paper Scissor" class="LargeSize" />
+          </l:VerticalLayout>
+         
+        </l:Grid>
+        <l:Grid binding="{/InformationCollection}" hSpacing="0"
+        defaultSpan="XL6 L6 M6 S6" class="sapUiSmallMargin centeralign">
+        <l:VerticalLayout class="sapUiTinyMarginEnd">
+          <Text text="You Choose" class="sapUiTinyMarginBottom PlayerSize" textAlign="Center" />
+          <Image src="{chosenImage>/imagePath}"  height="35%" width="35%"/>
+          <l:HorizontalLayout >
+            <Image src="../resources/img/rock.png" press="onChoose(0)" height="25%" width="25%"/>
+          <Image src="../resources/img/paper.png" press="onChoose(1)" height="25%" width="25%"/>
+          
+          <Image src="../resources/img/scissor.png" press="onChoose(2)" height="25%" width="25%" />
+        </l:HorizontalLayout>
+        </l:VerticalLayout>
+        <l:VerticalLayout class="sapUiTinyMarginEnd">
+          <Text text="Computer Choose" class="sapUiTinyMarginBottom PlayerSize" textAlign="Center" />
+          <Image src="{chosenImage>/imageCompPath}"  height="100%" width="100%"/>
+           
+        </l:VerticalLayout>
+      </l:Grid>
+      <l:Grid binding="{/InformationCollection}" hSpacing="0"
+      defaultSpan="XL6 L6 M6 S6" class="sapUiSmallMargin centeralign">
+      <l:VerticalLayout class="sapUiTinyMarginEnd">
+        <Text text="Your Score" class="sapUiTinyMarginBottom PlayerSize" textAlign="Center" />
+        <Text text="{chosenImage>/yourscore}" class="sapUiTinyMarginBottom ScoreSize" textAlign="Center" />
+ 
+      </l:VerticalLayout>
+      <l:VerticalLayout class="sapUiTinyMarginEnd">
+        <Text text="Computer Score" class="sapUiTinyMarginBottom PlayerSize" textAlign="Center" />
+        <Text text="{chosenImage>/compscore}" class="sapUiTinyMarginBottom ScoreSize" textAlign="Center" />
+
+      </l:VerticalLayout>
+    </l:Grid>
+        </content>
+      </Page>
+    </pages>
+  </App>
+</mvc:View>

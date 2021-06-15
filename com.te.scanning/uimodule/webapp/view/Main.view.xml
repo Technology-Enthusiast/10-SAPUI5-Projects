@@ -1,0 +1,27 @@
+<mvc:View controllerName="com.te.scanning.controller.Main" displayBlock="true"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:html="http://www.w3.org/1999/xhtml">
+  <App id="idAppControl">
+    <pages>
+      <Page title="{i18n>title}">
+        <content>
+          <html:div id="scandit-barcode-picker"></html:div>
+
+        </content>
+        <footer>
+          <Bar>
+            <contentLeft>
+              <Button text="Start Scanning" type="Accept" press="startScanning" />
+
+            </contentLeft>
+
+            <contentRight>
+              <Button text="Stop Scanning" type="Reject" press="stopScanning" />
+            </contentRight>
+          </Bar>
+        </footer>
+      </Page>
+    </pages>
+  </App>
+</mvc:View>

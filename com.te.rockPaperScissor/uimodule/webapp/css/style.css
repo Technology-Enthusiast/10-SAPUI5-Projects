@@ -1,0 +1,23 @@
+/* Enter your custom styles here */
+
+.sapUiLayoutCSSGrid .stylePageLayout {
+	background-color: #3b6f9a;
+	color: #ffffff;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.centeralign{
+text-align:center!important;
+}
+.LargeSize{
+	font-size: 32px;
+}
+.PlayerSize{
+	font-size: 25px;
+}
+.ScoreSize{
+	font-size: 20px;
+	font-weight: bold;
+}
