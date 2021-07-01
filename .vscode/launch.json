@@ -1,11 +1,4 @@
 {
-    "inputs": [
-        {
-            "id": "UI5Version",
-            "type": "command",
-            "command": "sap.ux.appGenerator.ui5Version"
-        }
-    ],
     "configurations": [
         {
             "name": "Start project1",
@@ -107,7 +100,317 @@
             "internalConsoleOptions": "neverOpen",
             "port": 9229,
             "env": {}
+        },
+        {
+            "name": "Start northwind",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "cwd": "${workspaceFolder}/northwind",
+            "windows": {
+                "runtimeExecutable": "npm.cmd"
+            },
+            "runtimeArgs": [
+                "run-script",
+                "start"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229,
+            "env": {
+                "DEBUG": "--inspect"
+            }
+        },
+        {
+            "name": "Start northwind with UI5 Version",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "cwd": "${workspaceFolder}/northwind",
+            "windows": {
+                "runtimeExecutable": "npm.cmd"
+            },
+            "runtimeArgs": [
+                "run-script",
+                "start"
+            ],
+            "args": [
+                "--",
+                "${input:UI5Version}"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229,
+            "env": {
+                "DEBUG": "--inspect"
+            }
+        },
+        {
+            "name": "Start northwind Mock",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/northwind",
+            "runtimeExecutable": "npm",
+            "windows": {
+                "runtimeExecutable": "npm.cmd"
+            },
+            "runtimeArgs": [
+                "run-script",
+                "start-mock"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229,
+            "env": {}
+        },
+        {
+            "name": "Start northwind Mock with UI5 Version",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/northwind",
+            "runtimeExecutable": "npm",
+            "windows": {
+                "runtimeExecutable": "npm.cmd"
+            },
+            "runtimeArgs": [
+                "run-script",
+                "start-mock"
+            ],
+            "args": [
+                "--",
+                "${input:UI5Version}"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229
+        },
+        {
+            "name": "Start northwind Local",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/northwind",
+            "runtimeExecutable": "npm",
+            "windows": {
+                "runtimeExecutable": "npm.cmd"
+            },
+            "runtimeArgs": [
+                "run-script",
+                "start-local"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229,
+            "env": {}
+        },
+        {
+            "name": "Start project1",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "cwd": "${workspaceFolder}/project1",
+            "windows": {
+                "runtimeExecutable": "npm.cmd"
+            },
+            "runtimeArgs": [
+                "run-script",
+                "start"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229,
+            "env": {
+                "DEBUG": "--inspect"
+            }
+        },
+        {
+            "name": "Start project1 with UI5 Version",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "cwd": "${workspaceFolder}/project1",
+            "windows": {
+                "runtimeExecutable": "npm.cmd"
+            },
+            "runtimeArgs": [
+                "run-script",
+                "start"
+            ],
+            "args": [
+                "--",
+                "${input:UI5Version}"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229,
+            "env": {
+                "DEBUG": "--inspect"
+            }
+        },
+        {
+            "name": "Start project1 Mock",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/project1",
+            "runtimeExecutable": "npm",
+            "windows": {
+                "runtimeExecutable": "npm.cmd"
+            },
+            "runtimeArgs": [
+                "run-script",
+                "start-mock"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229,
+            "env": {}
+        },
+        {
+            "name": "Start project1 Mock with UI5 Version",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/project1",
+            "runtimeExecutable": "npm",
+            "windows": {
+                "runtimeExecutable": "npm.cmd"
+            },
+            "runtimeArgs": [
+                "run-script",
+                "start-mock"
+            ],
+            "args": [
+                "--",
+                "${input:UI5Version}"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229
+        },
+        {
+            "name": "Start project1 Local",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/project1",
+            "runtimeExecutable": "npm",
+            "windows": {
+                "runtimeExecutable": "npm.cmd"
+            },
+            "runtimeArgs": [
+                "run-script",
+                "start-local"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229,
+            "env": {}
+        },
+        {
+            "name": "Start project2",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "cwd": "${workspaceFolder}/project2",
+            "windows": {
+                "runtimeExecutable": "npm.cmd"
+            },
+            "runtimeArgs": [
+                "run-script",
+                "start"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229,
+            "env": {
+                "DEBUG": "--inspect"
+            }
+        },
+        {
+            "name": "Start project2 with UI5 Version",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "cwd": "${workspaceFolder}/project2",
+            "windows": {
+                "runtimeExecutable": "npm.cmd"
+            },
+            "runtimeArgs": [
+                "run-script",
+                "start"
+            ],
+            "args": [
+                "--",
+                "${input:UI5Version}"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229,
+            "env": {
+                "DEBUG": "--inspect"
+            }
+        },
+        {
+            "name": "Start project2 Mock",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/project2",
+            "runtimeExecutable": "npm",
+            "windows": {
+                "runtimeExecutable": "npm.cmd"
+            },
+            "runtimeArgs": [
+                "run-script",
+                "start-mock"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229,
+            "env": {}
+        },
+        {
+            "name": "Start project2 Mock with UI5 Version",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/project2",
+            "runtimeExecutable": "npm",
+            "windows": {
+                "runtimeExecutable": "npm.cmd"
+            },
+            "runtimeArgs": [
+                "run-script",
+                "start-mock"
+            ],
+            "args": [
+                "--",
+                "${input:UI5Version}"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229
+        },
+        {
+            "name": "Start project2 Local",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/project2",
+            "runtimeExecutable": "npm",
+            "windows": {
+                "runtimeExecutable": "npm.cmd"
+            },
+            "runtimeArgs": [
+                "run-script",
+                "start-local"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229,
+            "env": {}
         }
     ],
-    "compounds": []
+    "compounds": [],
+    "inputs": [
+        {
+            "id": "UI5Version",
+            "type": "command",
+            "command": "sap.ux.appGenerator.ui5Version"
+        }
+    ]
 }
